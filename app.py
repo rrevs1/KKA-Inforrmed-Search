@@ -110,7 +110,7 @@ def tampilkan_hasil(hasil):
 
     with kolom_info:
         st.subheader("Perbandingan")
-        st.dataframe(buat_tabel(hasil), use_container_width=True, hide_index=True)
+        st.dataframe(buat_tabel(hasil), hide_index=True)
 
         g, a = hasil.get("Greedy"), hasil.get("A*")
         if g is not None and a is not None and g.found and a.found:
